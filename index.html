@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Animated Icons</title>
+  <style>
+    #chain,
+    #battery,
+    #hourglass,
+    #eye {
+      font-size: 50px;
+      /* background: #f4f4f4; */
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="fa" id="chain"> </div>
+  <br><br>
+  <a href="https://www.fg-a.com/american-1.shtml" target="_blank"><img
+      src="https://content.screencast.com/users/fg-a/folders/american-flags/media/f16faa33-b1bd-4879-9d1a-2b6293a33c40/usaCa.gif"
+      width="68" height="50" border="0" alt="Flags" /></a>
+  <br><br>
+  <div id="battery" class="fa"></div>
+  <br><br>
+  <div class="fa" id="hourglass"> </div>
+  <br><br>
+  <div class="fa" id="eye"> </div>
+  <br><br>
+
+  <script>
+    //set up brake chain
+    function brakeChain() {
+      let chain = document.getElementById('chain');
+      chain.innerHTML = "&#xf0c1";
+
+      setTimeout(function () {
+        chain.innerHTML = "&#xf127";
+      }, 1000)
+    }
+
+    //call brake chain to make animation
+    brakeChain();
+    //animate every 2 minutes
+    setInterval(brakeChain, 2000);
+
+    //battery
+    function batteryCharge() {
+      let battery = document.getElementById('battery');
+      battery.innerHTML = "&#xf244";
+
+      setTimeout(function () {
+        battery.innerHTML = "&#xf243"
+      }, 1000)
+      setTimeout(function () {
+        battery.innerHTML = "&#xf242"
+      }, 2000)
+      setTimeout(function () {
+        battery.innerHTML = "&#xf241"
+      }, 3000)
+      setTimeout(function () {
+        battery.innerHTML = "&#xf240"
+      }, 4000)
+    }
+
+    batteryCharge();
+    setInterval(batteryCharge, 5000);
+
+    //hourglass
+
+    function hourglass() {
+      let hour = document.getElementById('hourglass');
+      hour.innerHTML = "&#xf251";
+
+      setTimeout(function () {
+        hour.innerHTML = "&#xf252"
+      }, 1000)
+      setTimeout(function () {
+        hour.innerHTML = "&#xf253"
+      }, 2000)
+    }
+
+    hourglass();
+    setInterval(hourglass, 3000);
+
+    //eye
+
+    function eyeFlash() {
+      let eye = document.getElementById('eye');
+      eye.innerHTML = "&#xf06e";
+
+      setTimeout(function () {
+        eye.innerHTML = "&#xf070"
+      }, 1000)
+    }
+
+    eyeFlash();
+    setInterval(eyeFlash, 2000);
+  </script>
+
+</body>
+
+</html>
